@@ -4,17 +4,17 @@
 
 local SETTINGS = {
     back_bone = 24816,
-    x = 0.075,
-    y = -0.15,
-    z = -0.02,
+    x = 0.20,
+    y = -0.185,
+    z = 0.05,
     x_rotation = 0.0,
-    y_rotation = 165.0,
+    y_rotation = 160.0,
     z_rotation = 0.0,
     compatable_weapon_hashes = {
       -- melee:
       --["prop_golf_iron_01"] = 1141786504, -- positioning still needs work
       ["w_me_bat"] = -1786099057,
-      ["prop_ld_jerrycan_01"] = 883325847,
+      --["prop_ld_jerrycan_01"] = 883325847,
       -- assault rifles:
       ["w_ar_carbinerifle"] = -2084633992,
       ["w_ar_carbineriflemk2"] = GetHashKey("WEAPON_CARBINERIFLE_Mk2"),
