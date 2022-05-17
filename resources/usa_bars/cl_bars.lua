@@ -12,7 +12,8 @@ local LOCATIONS = {
     {x = 4904.83203125, y = -4941.8154296875, z = 3.379533290863}, -- Cayo Perico island
     {x = -233.02548217773, y = -1498.24609375, z = 29.13104057312}, -- chamberlain hills community center (addon MLO)
     {x = -1293.1474609375, y = -297.61184692383, z = 36.050827026367}, -- arcade
-    {x = 987.72308349609, y = -95.18229675293, z = 74.845748901367} -- outlaw biker
+    {x = 987.72308349609, y = -95.18229675293, z = 74.845748901367}, -- outlaw biker
+    {x = 2511.150390625, y = 4097.0048828125, z = 38.584575653076} -- lunatix biker
 }
 
 local ITEMS = {} -- loaded from server

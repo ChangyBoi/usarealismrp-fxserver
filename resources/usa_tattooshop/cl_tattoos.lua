@@ -5,7 +5,8 @@ local SHOPS = {
   {x = 1321.550, y = -1653.529, z = 52.27}, -- los santos, east side
   {x = -1155.323, y = -1426.81, z = 4.9}, -- los santos, west side vespucci beach
   {x = -3169.1, y = 1076.8, z = 20.8}, -- ls, west coast
-  {x = -255.64067077637, y = -1530.5904541016, z = 32.483879089355} -- chamberlain hills community center (addon MLO)
+  {x = -255.64067077637, y = -1530.5904541016, z = 32.483879089355}, -- chamberlain hills community center (addon MLO)
+  {x = 2511.6831054688, y = 4089.3657226563, z = 35.585105895996} -- lunatix biker (addon MLO)
 }
 
 local TATTOOS = nil
