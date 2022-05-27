@@ -183,14 +183,14 @@ AddEventHandler("jail:changeClothes", function(gender)
         else
             --SetPedComponentVariation(me, 4, 7, 15, 0)
             SetPedComponentVariation(playerPed, 1, 0, 1, 2)
-            SetPedComponentVariation(GetPlayerPed(-1), 4, 3, 7, 2) -- legs
-            SetPedComponentVariation(GetPlayerPed(-1), 6, 57, 2, 2) -- shoes
-            SetPedComponentVariation(GetPlayerPed(-1), 11, 74, 0, 2) -- torso
+            SetPedComponentVariation(GetPlayerPed(-1), 4, 11, 0, 2) -- legs
+            SetPedComponentVariation(GetPlayerPed(-1), 6, 13, 0, 2) -- shoes
+            SetPedComponentVariation(GetPlayerPed(-1), 11, 57, 0, 2) -- torso
             SetPedComponentVariation(GetPlayerPed(-1), 8, 15, 0, 2) -- undershirt (aka torso 1)
             SetPedComponentVariation(GetPlayerPed(-1), 7, 0, 0, 2) -- accessories
             SetPedComponentVariation(GetPlayerPed(-1), 9, 0, 0, 2) -- Armor
             SetPedComponentVariation(GetPlayerPed(-1), 10, 0, 0, 2) -- Decals
-            SetPedComponentVariation(GetPlayerPed(-1), 3, 0, 0, 2)
+            SetPedComponentVariation(GetPlayerPed(-1), 3, 3, 0, 2) -- Arms
             SetPedComponentVariation(GetPlayerPed(-1), 5, 0, 0, 2) -- bags
             for i = 0, 7 do
               ClearPedProp(playerPed, i)
@@ -199,16 +199,16 @@ AddEventHandler("jail:changeClothes", function(gender)
     else
         if IsPedModel(playerPed, GetHashKey("mp_f_freemode_01")) then
           SetPedComponentVariation(playerPed, 1, 0, 1, 2)
-          SetPedComponentVariation(GetPlayerPed(-1), 4, 3, 15, 2)
-          SetPedComponentVariation(GetPlayerPed(-1), 5, 0, 0, 2)
-          SetPedComponentVariation(GetPlayerPed(-1), 4, 3, 15, 2)
-          SetPedComponentVariation(GetPlayerPed(-1), 6, 1, 0, 2)
-          SetPedComponentVariation(GetPlayerPed(-1), 7, 0, 0, 2)
-          SetPedComponentVariation(GetPlayerPed(-1), 11, 9, 1, 2)
-          SetPedComponentVariation(GetPlayerPed(-1), 8, 2, 15, 2)
-          SetPedComponentVariation(GetPlayerPed(-1), 3, 0, 0, 2)
-          SetPedComponentVariation(GetPlayerPed(-1), 10, 0, 0, 2)
-          SetPedComponentVariation(GetPlayerPed(-1), 9, 0, 0, 2)
+          SetPedComponentVariation(GetPlayerPed(-1), 4, 3, 15, 2) -- legs
+          SetPedComponentVariation(GetPlayerPed(-1), 5, 0, 0, 2) -- bags
+          SetPedComponentVariation(GetPlayerPed(-1), 4, 3, 15, 2) -- legs
+          SetPedComponentVariation(GetPlayerPed(-1), 6, 1, 0, 2) -- shoes
+          SetPedComponentVariation(GetPlayerPed(-1), 7, 0, 0, 2) -- accessories
+          SetPedComponentVariation(GetPlayerPed(-1), 11, 9, 1, 2) -- torso
+          SetPedComponentVariation(GetPlayerPed(-1), 8, 15, 0, 2) -- undershirt aka torso 1
+          SetPedComponentVariation(GetPlayerPed(-1), 3, 9, 0, 2) -- arms
+          SetPedComponentVariation(GetPlayerPed(-1), 10, 0, 0, 2) -- decals
+          SetPedComponentVariation(GetPlayerPed(-1), 9, 0, 0, 2) -- armor
           for i = 0, 7 do
             ClearPedProp(playerPed, i)
           end

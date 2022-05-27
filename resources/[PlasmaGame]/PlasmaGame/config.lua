@@ -352,23 +352,23 @@ defaultOutCoords = {x=-1096.7523193359,y=-1274.1475830078,z=5.8445658683777,h=10
 
 TenuFemme = {
 [3] = {model = 8, colorA = 0, colorB = 0},       -- Torso / Arms / Bras
-[4] = {model = 114, colorA = 2, colorB = 1},      -- Legs / Pants / Jambe
-[6] = {model = 85, colorA = 2, colorB = 1},      -- Feet / Shoes / Chaussure
+[4] = {model = 32, colorA = 2, colorB = 1},      -- Legs / Pants / Jambe
+[6] = {model = 30, colorA = 2, colorB = 1},      -- Feet / Shoes / Chaussure
                                                  
 [7] = {model = 0, colorA = 0, colorB = 0},       --Accessories / Accessoires
 [8] = {model = 14, colorA = 0, colorB = 0},       --Undershirt / T-Shirt
-[11] = {model = 308, colorA = 2, colorB = 1}     --Tops / Veste
+[11] = {model = 75, colorA = 2, colorB = 1}     --Tops / Veste
                                                  
 }                                                
                                                  
 TenuHomme = {                              
 [3] = {model = 7, colorA = 0, colorB = 0},       -- Torso / Arms / Bras
-[4] = {model = 112, colorA = 2, colorB = 1},      -- Legs / Pants / Jambe
-[6] = {model = 82, colorA = 2, colorB = 1},      -- Feet / Shoes / Chaussure
+[4] = {model = 34, colorA = 2, colorB = 1},      -- Legs / Pants / Jambe
+[6] = {model = 31, colorA = 2, colorB = 1},      -- Feet / Shoes / Chaussure
                                                  
 [7] = {model = 0, colorA = 0, colorB = 0},       --Accessories / Accessoires
-[8] = {model = 18, colorA = 0, colorB = 0},      --Undershirt / T-Shirt
-[11] = {model = 287, colorA = 2, colorB = 1},    --Tops / Veste
+[8] = {model = 15, colorA = 0, colorB = 0},      --Undershirt / T-Shirt
+[11] = {model = 62, colorA = 2, colorB = 1},    --Tops / Veste
 }
 
 
@@ -376,11 +376,11 @@ TenuHomme = {
 useCustomMask = true
 
 MaskFemme = {
-[1]={model = 134, colorA = 7, colorB = 1},
-[2]={model = 135, colorA = 0, colorB = 1}
+[1]={model = 35, colorA = 7, colorB = 1},
+[2]={model = 36, colorA = 0, colorB = 1}
 }
 
 MaskHomme = {
-[1]={model = 129, colorA = 7, colorB = 1},
-[2]={model = 130, colorA = 0, colorB = 1}
+[1]={model = 27, colorA = 7, colorB = 1},
+[2]={model = 28, colorA = 0, colorB = 1}
 }
