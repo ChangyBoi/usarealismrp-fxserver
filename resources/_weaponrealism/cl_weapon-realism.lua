@@ -37,360 +37,6 @@ Citizen.CreateThread(function()
 		
 		DisplayAmmoThisFrame(false)
 		
-		-- Shakycam
-		
-		-- Pistol
-		if weapon == GetHashKey("WEAPON_STUNGUN") then
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.01)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_FLAREGUN") then	
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.01)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_SNSPISTOL") then		
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.02)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_SNSPISTOL_MK2") then		
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.025)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_PISTOL") then		
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.025)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_PISTOL_MK2") then
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.03)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_APPISTOL") then
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.05)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_COMBATPISTOL") then		
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.03)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_PISTOL50") then
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.05)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_HEAVYPISTOL") then		
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.03)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_VINTAGEPISTOL") then		
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.025)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_MARKSMANPISTOL") then		
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.03)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_REVOLVER") then	
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.045)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_REVOLVER_MK2") then	
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.055)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_DOUBLEACTION") then	
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.025)
-			end
-		end
-		-- SMG
-		
-		if weapon == GetHashKey("WEAPON_MICROSMG") then	
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.035)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_COMBATPDW") then			
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.045)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_SMG") then
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.045)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_SMG_MK2") then	
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.055)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_ASSAULTSMG") then	
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.050)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_MACHINEPISTOL") then		
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.035)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_MINISMG") then
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.035)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_MG") then
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.07)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_COMBATMG") then		
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.08)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_COMBATMG_MK2") then			
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.085)
-			end
-		end
-		
-		-- Rifles
-		
-		if weapon == GetHashKey("WEAPON_ASSAULTRIFLE") then			
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.07)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_ASSAULTRIFLE_MK2") then			
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.075)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_CARBINERIFLE") then	
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.06)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_CARBINERIFLE_MK2") then			
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.065)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_ADVANCEDRIFLE") then		
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.06)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_GUSENBERG") then		
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.05)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_SPECIALCARBINE") then		
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.06)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_SPECIALCARBINE_MK2") then		
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.075)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_BULLPUPRIFLE") then			
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.05)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_BULLPUPRIFLE_MK2") then			
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.065)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_COMPACTRIFLE") then		
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.05)
-			end
-		end
-		
-		-- Shotgun
-		
-		if weapon == GetHashKey("WEAPON_PUMPSHOTGUN") then
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.07)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_PUMPSHOTGUN_MK2") then
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.085)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_SAWNOFFSHOTGUN") then
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.06)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_ASSAULTSHOTGUN") then	
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.12)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_BULLPUPSHOTGUN") then		
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.08)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_DBSHOTGUN") then	
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.05)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_AUTOSHOTGUN") then	
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.08)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_MUSKET") then
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.04)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_HEAVYSHOTGUN") then	
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.13)
-			end
-		end
-		
-		-- Sniper
-		
-		if weapon == GetHashKey("WEAPON_SNIPERRIFLE") then
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.2)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_HEAVYSNIPER") then	
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.3)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_HEAVYSNIPER_MK2") then
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.35)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_MARKSMANRIFLE") then			
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.1)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_MARKSMANRIFLE_MK2") then			
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.1)
-			end
-		end
-		
-		-- Launcher
-		
-		if weapon == GetHashKey("WEAPON_GRENADELAUNCHER") then		
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.08)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_RPG") then
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.9)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_HOMINGLAUNCHER") then		
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.9)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_MINIGUN") then	
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.20)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_RAILGUN") then	
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 1.0)
-				
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_COMPACTLAUNCHER") then		
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.08)
-			end
-		end
-		
-		if weapon == GetHashKey("WEAPON_FIREWORK") then	
-			if IsPedShooting(ped) then
-				ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.5)
-			end
-		end
 		
 		-- Infinite FireExtinguisher
 		
@@ -404,19 +50,19 @@ end)
 
 -- custom (more noticable) weapon recoil --
 local RECOILS = {
-	[GetHashKey("WEAPON_PISTOL")] = 0.5, -- PISTOL
-	[GetHashKey("WEAPON_PISTOL_MK2")] = 0.5, -- PISTOL MK2
-	[GetHashKey("WEAPON_COMBATPISTOL")] = 0.5, -- COMBAT PISTOL
-	[GetHashKey("WEAPON_APPISTOL")] = 0.75, -- AP PISTOL
+	[GetHashKey("WEAPON_PISTOL")] = 0.45, -- PISTOL
+	[GetHashKey("WEAPON_PISTOL_MK2")] = 0.45, -- PISTOL MK2
+	[GetHashKey("WEAPON_COMBATPISTOL")] = 0.45, -- COMBAT PISTOL
+	[GetHashKey("WEAPON_APPISTOL")] = 1.0, -- AP PISTOL
 	[GetHashKey("WEAPON_PISTOL50")] = 1.85, -- PISTOL .50
-	[GetHashKey("WEAPON_MICROSMG")] = 1.05, -- MICRO SMG
-	[GetHashKey("WEAPON_SMG")] = 0.45, -- SMG
-	[GetHashKey("WEAPON_SMG_MK2")] = 0.8, -- SMG MK2
-	[GetHashKey("WEAPON_ASSAULTSMG")] = 1.3, -- ASSAULT SMG
-	[GetHashKey("WEAPON_ASSAULTRIFLE")] = 0.7, -- ASSAULT RIFLE
-	[GetHashKey("WEAPON_ASSAULTRIFLE_MK2")] = 0.7, -- ASSAULT RIFLE MK2
-	[GetHashKey("WEAPON_CARBINERIFLE")] = 0.5, -- CARBINE RIFLE
-	[GetHashKey("WEAPON_CARBINERIFLE_MK2")] = 0.5, -- CARBINE RIFLE MK2
+	[GetHashKey("WEAPON_MICROSMG")] = 1.1, -- MICRO SMG
+	[GetHashKey("WEAPON_SMG")] = 0.5, -- SMG
+	[GetHashKey("WEAPON_SMG_MK2")] = 0.65, -- SMG MK2
+	[GetHashKey("WEAPON_ASSAULTSMG")] = 1.0, -- ASSAULT SMG
+	[GetHashKey("WEAPON_ASSAULTRIFLE")] = 0.45, -- ASSAULT RIFLE
+	[GetHashKey("WEAPON_ASSAULTRIFLE_MK2")] = 0.45, -- ASSAULT RIFLE MK2
+	[GetHashKey("WEAPON_CARBINERIFLE")] = 0.4, -- CARBINE RIFLE
+	[GetHashKey("WEAPON_CARBINERIFLE_MK2")] = 0.4, -- CARBINE RIFLE MK2
 	[GetHashKey("WEAPON_ADVANCEDRIFLE")] = 1.2, -- ADVANCED RIFLE
 	[GetHashKey("WEAPON_MG")] = 1.6, -- MG
 	[GetHashKey("WEAPON_COMBATMG")] = 1.6, -- COMBAT MG
@@ -436,15 +82,15 @@ local RECOILS = {
 	[GetHashKey("WEAPON_RPG")] = 10.0, -- RPG
 	[GetHashKey("WEAPON_STINGER")] = 10.0, -- STINGER
 	[GetHashKey("WEAPON_MINIGUN")] = 1.0, -- MINIGUN
-	[GetHashKey("WEAPON_SNSPISTOL")] = 0.7, -- SNS PISTOL
-	[GetHashKey("WEAPON_SNSPISTOL_MK2")] = 0.9, -- SNS PISTOL MK2
-	[GetHashKey("WEAPON_GUSENBERG")] = 1.25, -- GUSENBERG
+	[GetHashKey("WEAPON_SNSPISTOL")] = 0.5, -- SNS PISTOL
+	[GetHashKey("WEAPON_SNSPISTOL_MK2")] = 0.55, -- SNS PISTOL MK2
+	[GetHashKey("WEAPON_GUSENBERG")] = 0.9, -- GUSENBERG
 	[GetHashKey("WEAPON_SPECIALCARBINE")] = 1.4, -- SPECIAL CARBINE
 	[GetHashKey("WEAPON_SPECIALCARBINE_MK2")] = 1.4, -- SPECIAL CARBINE MK2
 	[GetHashKey("WEAPON_HEAVYPISTOL")] = 0.8, -- HEAVY PISTOL
 	[GetHashKey("WEAPON_BULLPUPRIFLE")] = 1.5, -- BULLPUP RIFLE
 	[GetHashKey("WEAPON_BULLPUPRIFLE_MK2")] = 1.5, -- BULLPUP RIFLE MK2
-	[GetHashKey("WEAPON_VINTAGEPISTOL")] = 1.3, -- VINTAGE PISTOL
+	[GetHashKey("WEAPON_VINTAGEPISTOL")] = 0.8, -- VINTAGE PISTOL
 	[GetHashKey("WEAPON_DOUBLEACTION")] = 2.0, -- DOUBLE ACTION REVOLVER
 	[GetHashKey("WEAPON_MUSKET")] = 2.0, -- MUSKET
 	[GetHashKey("WEAPON_HEAVYSHOTGUN")] = 2.5, -- HEAVY SHOTGUN
@@ -455,17 +101,17 @@ local RECOILS = {
 	[GetHashKey("WEAPON_COMBATPDW")] = 0.2, -- COMBAT PDW
 	[GetHashKey("WEAPON_MARKSMANPISTOL")] = 2.0, -- MARKSMAN PISTOL
 	[GetHashKey("WEAPON_RAILGUN")] = 2.4, -- RAILGUN
-	[GetHashKey("WEAPON_MACHINEPISTOL")] = 0.85, -- MACHINE PISTOL
+	[GetHashKey("WEAPON_MACHINEPISTOL")] = 0.65, -- MACHINE PISTOL
 	[GetHashKey("WEAPON_REVOLVER")] = 2.1, -- REVOLVER
 	[GetHashKey("WEAPON_REVOLVER_MK2")] = 2.1, -- REVOLVER MK2
 	[GetHashKey("WEAPON_DBSHOTGUN")] = 2.2, -- DOUBLE BARREL SHOTGUN
-	[GetHashKey("WEAPON_COMPACTRIFLE")] = 1.2, -- COMPACT RIFLE
+	[GetHashKey("WEAPON_COMPACTRIFLE")] = 0.9, -- COMPACT RIFLE
 	[GetHashKey("WEAPON_AUTOSHOTGUN")] = 1.8, -- AUTO SHOTGUN
 	[GetHashKey("WEAPON_COMPACTLAUNCHER")] = 0.5, -- COMPACT LAUNCHER
-	[GetHashKey("WEAPON_MINISMG")] = 1.6, -- MINI SMG		
+	[GetHashKey("WEAPON_MINISMG")] = 0.8, -- MINI SMG		
 }
 
-local CAR_INNACURACY_PITCH = 3.0
+local CAR_INNACURACY_PITCH = 2.0
 
 Citizen.CreateThread(function()
 	while true do
@@ -475,9 +121,9 @@ Citizen.CreateThread(function()
 			if RECOILS[wepHash] then
 				local p = GetGameplayCamRelativePitch()
 				if not IsPedInAnyVehicle(me, false) then
-					SetGameplayCamRelativePitch(p + RECOILS[wepHash], 1.0)
+					SetGameplayCamRelativePitch(p + RECOILS[wepHash], 0.65)
 				else
-					SetGameplayCamRelativePitch(p + RECOILS[wepHash] + CAR_INNACURACY_PITCH, 1.0)
+					SetGameplayCamRelativePitch(p + RECOILS[wepHash] + CAR_INNACURACY_PITCH, 0.65)
 				end
 			else
 				print("no recoil value for wep hash: " .. wepHash)
