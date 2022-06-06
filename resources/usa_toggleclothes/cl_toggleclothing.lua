@@ -123,13 +123,13 @@ AddEventHandler("headprops:toggleComponent", function(component_index)
 			end
 		else -- if not male, then do this
 			TriggerEvent("usa:playAnimation", "clothingtrousers", "try_trousers_neutral_c", -8, 1, -1, 53, 0, 0, 0, 0,  1.5) -- play remove pants animation
-			if GetPedDrawableVariation(ped, component_index) ~= 36 then -- component is on, take off
+			if GetPedDrawableVariation(ped, component_index) ~= 38 then -- component is on, take off
 				local value = GetPedDrawableVariation(ped, component_index)
 				local texture = GetPedTextureVariation(ped, component_index)
 				components[strComponentIndex].value = tonumber(value)
 				components[strComponentIndex].texture = tonumber(texture)
 				Wait(waitTime)
-				SetPedComponentVariation(ped, component_index, 36, 0, 2) -- set FEMALE legs to underwear | If clothing ever pushes this, make sure to edit the 3rd value
+				SetPedComponentVariation(ped, component_index, 38, 0, 2) -- set FEMALE legs to underwear | If clothing ever pushes this, make sure to edit the 3rd value
 			else
 				-- off, put back on --
 				Wait(waitTime)
@@ -163,13 +163,13 @@ AddEventHandler("headprops:toggleComponent", function(component_index)
 	elseif component_index == 6 then -- /shoes
 		if isMale then -- Check if male
 			TriggerEvent("usa:playAnimation", "clothingshoes", "try_shoes_neutral_b", -8, 1, -1, 53, 0, 0, 0, 0,  1.5)
-			if GetPedDrawableVariation(ped, component_index) ~= 50 then -- component is on, take off
+			if GetPedDrawableVariation(ped, component_index) ~= 55 then -- component is on, take off
 				local value = GetPedDrawableVariation(ped, component_index)
 				local texture = GetPedTextureVariation(ped, component_index)
 				components[strComponentIndex].value = tonumber(value)
 				components[strComponentIndex].texture = tonumber(texture)
 				Wait(waitTime)
-				SetPedComponentVariation(ped, component_index, 50, 0, 2) -- Change to MALE bare feet
+				SetPedComponentVariation(ped, component_index, 55, 0, 2) -- Change to MALE bare feet
 			else
 				-- off, put back on --
 				Wait(waitTime)
@@ -181,13 +181,13 @@ AddEventHandler("headprops:toggleComponent", function(component_index)
 			end
 		else -- Check if female
 			TriggerEvent("usa:playAnimation", "clothingshoes", "try_shoes_neutral_b", -8, 1, -1, 53, 0, 0, 0, 0,  1.5)
-			if GetPedDrawableVariation(ped, component_index) ~= 50 then -- component is on, take off
+			if GetPedDrawableVariation(ped, component_index) ~= 53 then -- component is on, take off
 				local value = GetPedDrawableVariation(ped, component_index)
 				local texture = GetPedTextureVariation(ped, component_index)
 				components[strComponentIndex].value = tonumber(value)
 				components[strComponentIndex].texture = tonumber(texture)
 				Wait(waitTime)
-				SetPedComponentVariation(ped, component_index, 50, 0, 2) -- Change to FEMALE bare feet
+				SetPedComponentVariation(ped, component_index, 53, 0, 2) -- Change to FEMALE bare feet
 			else
 				-- off, put back on --
 				Wait(waitTime)
