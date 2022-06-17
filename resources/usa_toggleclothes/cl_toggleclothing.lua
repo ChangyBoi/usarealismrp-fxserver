@@ -169,7 +169,7 @@ AddEventHandler("headprops:toggleComponent", function(component_index)
 				components[strComponentIndex].value = tonumber(value)
 				components[strComponentIndex].texture = tonumber(texture)
 				Wait(waitTime)
-				SetPedComponentVariation(ped, component_index, 55, 0, 2) -- Change to MALE bare feet
+				SetPedComponentVariation(ped, component_index, 56, 0, 2) -- Change to MALE bare feet
 			else
 				-- off, put back on --
 				Wait(waitTime)
@@ -187,7 +187,7 @@ AddEventHandler("headprops:toggleComponent", function(component_index)
 				components[strComponentIndex].value = tonumber(value)
 				components[strComponentIndex].texture = tonumber(texture)
 				Wait(waitTime)
-				SetPedComponentVariation(ped, component_index, 53, 0, 2) -- Change to FEMALE bare feet
+				SetPedComponentVariation(ped, component_index, 54, 0, 2) -- Change to FEMALE bare feet
 			else
 				-- off, put back on --
 				Wait(waitTime)
