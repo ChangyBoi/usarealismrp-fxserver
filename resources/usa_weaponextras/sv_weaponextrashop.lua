@@ -2,7 +2,7 @@
 --# for USA REALISM RP
 --# by: minipunch
 
-local ITEMS = { -- must be kept in sync with one in sv_weaponeaxtrashop.lua --
+local ITEMS = {
     ["Tints"] = {
         legal = {
             [0] = {name = "Normal", price = 500},
@@ -36,7 +36,7 @@ local ITEMS = { -- must be kept in sync with one in sv_weaponeaxtrashop.lua --
                 {name = "Etched Wood Grip Finish", value = "COMPONENT_SNSPISTOL_VARMOD_LOWRIDER", price = 500, weapon_hash = -1076751822}
             },
             ["Heavy Pistol"] = {
-                {name = "Flashlight", value = "COMPONENT_AT_PI_FLSH", price = 200, weapon_hash = -771403250},
+                {name = "Flashlight", value = "COMPONENT_AT_PI_FLSH", price = 200, weapon_hash = GetHashKey("WEAPON_HEAVYPISTOL")},
                 {name = "Etched Wood Grip Finish", value = "COMPONENT_HEAVYPISTOL_VARMOD_LUXE", price = 2000, weapon_hash = -771403250}
             },
             ["Glock"] = {
@@ -78,7 +78,7 @@ local ITEMS = { -- must be kept in sync with one in sv_weaponeaxtrashop.lua --
             },
             ["Heavy Pistol"] = {
                 { name = "Empty Heavy Pistol Extended Mag", quantity = 1, type = "magazine", price = 500, weight = 7, receives = ".45", MAX_CAPACITY = 36, currentCapacity = 0, legality = "illegal", notStackable = true, magComponent = "COMPONENT_HEAVYPISTOL_CLIP_02", compatibleWeapon = GetHashKey("WEAPON_HEAVYPISTOL") },
-                {name = "Suppressor", value = "COMPONENT_AT_PI_SUPP", price = 1500, weapon_hash = -771403250}
+                {name = "Suppressor", value = "COMPONENT_AT_PI_SUPP", price = 1500, weapon_hash = GetHashKey("WEAPON_HEAVYPISTOL")}
             },
             ["Glock"] = {
                 { name = "Empty Glock Extended Mag", quantity = 1, type = "magazine", price = 175, weight = 7, receives = "9mm", MAX_CAPACITY = 16, currentCapacity = 0, legality = "illegal", notStackable = true, magComponent = "COMPONENT_COMBATPISTOL_CLIP_02", compatibleWeapon = GetHashKey("WEAPON_COMBATPISTOL") },
@@ -203,6 +203,7 @@ AddEventHandler("weaponExtraShop:requestComponentPurchase", function(weapon, com
     end
     if component.price <= char.get("money") then -- see if user has enough money
         if wephash then -- not a magazine
+            wephash = wephash & 0xFFFFFFFF -- convert to unsigned weapon hash
             local weapon = char.getItemWithField("hash", wephash)
             if weapon then
                 char.removeMoney(component.price)

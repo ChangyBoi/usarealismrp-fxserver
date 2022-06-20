@@ -103,12 +103,13 @@ RegisterServerEvent("methJob:startTimer")
 AddEventHandler("methJob:startTimer", function(timerType)
 	local usource = source
 	local char = exports["usa-characters"]:GetCharacter(source)
+	local firstName = char.get("name").first
 	local messages = {
-		"Sup! You can chill out here while I get your stuff.",
-		"Long time no see!",
-		"What's up good lookin!",
-		"Back already?",
-		"Miss me already?"
+		"Sup "..firstName.."! You can chill out here while I get your stuff.",
+		"Long time no see "..firstName.."!",
+		"What's up good lookin! Can't get enough of it huh?",
+		"Back already? Wish my dad Mini came back...",
+		"Have you heard of Rick Sanchez? Dude is my number 1 buyer!"
 	}
 	TriggerClientEvent("usa:notify", source, messages[math.random(1, tonumber(#messages))])
 	if timerType == "meth_supplies_ped" then
@@ -128,7 +129,7 @@ AddEventHandler("methJob:startTimer", function(timerType)
 			char.giveItem(suspiciousChemicals, 1)
 		end)
 	elseif timerType == "meth_supplies_ped_quality" then
-		local seconds = 60
+		local seconds = 45
 		local time = seconds * 1000
 		SetTimeout(time, function()
 			TriggerClientEvent("usa:notify", usource, "Here are the extra chemicals needed for good produce!")

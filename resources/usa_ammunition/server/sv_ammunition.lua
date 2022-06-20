@@ -287,9 +287,9 @@ end)
 RegisterServerEvent("ammo:save")
 AddEventHandler("ammo:save", function(newAmmoCount)
     local char = exports["usa-characters"]:GetCharacter(source)
-    local selectedIndex = char.get("currentlySelectedIndex")
-    if selectedIndex then
-        local wep = char.getItemByIndex(selectedIndex)
+    local invIndexOfItemToSaveAmmo = (char.get("currentlySelectedIndex") or char.get("lastSelectedIndex"))
+    if invIndexOfItemToSaveAmmo then
+        local wep = char.getItemByIndex(invIndexOfItemToSaveAmmo)
         if wep then
             if wep and wep.type == "weapon" and wep.magazine then
                 --print("saving wep (w/ uuid #" .. wep.uuid .. ") ammo, count: " .. newAmmoCount)
@@ -297,7 +297,7 @@ AddEventHandler("ammo:save", function(newAmmoCount)
                 char.modifyItemByUUID(wep.uuid, { magazine = wep.magazine })
             else
                 if wep.name:find("Molotov") or wep.name:find("Flare") or wep.name:find("Tear Gas") or wep.name:find("Sticky Bomb") or wep.name:find("Flashbang") then
-                    char.removeItemByIndex(selectedIndex, 1)
+                    char.removeItemByIndex(invIndexOfItemToSaveAmmo, 1)
                 end
             end
         end
@@ -309,6 +309,7 @@ end)
 RegisterServerEvent("ammo:weaponStored")
 AddEventHandler("ammo:weaponStored", function(ammoCount)
     local c = exports["usa-characters"]:GetCharacter(source)
+    c.set("lastSelectedIndex", c.get("currentlySelectedIndex"))
     c.set("currentlySelectedIndex", nil)
 end)
 

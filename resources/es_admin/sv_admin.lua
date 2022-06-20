@@ -405,9 +405,14 @@ TriggerEvent('es:addGroupCommand', 'goto', "mod", function(source, args, char)
 		TriggerEvent("usa:notifyStaff", '^2^*[STAFF]^r^0 Player ^2'..GetPlayerName(source)..' ['..source..'] ^0 has teleported to a fire department.')
 		return
 	elseif args[2] == "mrpd" then
-		local mrpdCoords = {x=-469.19918823242, y=-976.70098876953, z=43.691345214844}
-		TriggerClientEvent('es_admin:teleportUserByCoords', source, fdCoords.x, fdCoords.y, fdCoords.z)
-		TriggerEvent("usa:notifyStaff", '^2^*[STAFF]^r^0 Player ^2'..GetPlayerName(source)..' ['..source..'] ^0 has teleported to a misson row police department.')
+		local mrpdCoords = {x = 469.36404418945, y = -977.47247314453, z = 43.691337585449}
+		TriggerClientEvent('es_admin:teleportUserByCoords', source, mrpdCoords.x, mrpdCoords.y, mrpdCoords.z)
+		TriggerEvent("usa:notifyStaff", '^2^*[STAFF]^r^0 Player ^2'..GetPlayerName(source)..' ['..source..'] ^0 has teleported to misson row police department.')
+		return
+	elseif args[2] == "staff" then
+		local staffCoords = {x = -2168.791015625, y = 5194.001953125, z = 16.65913772583}
+		TriggerClientEvent('es_admin:teleportUserByCoords', source, staffCoords.x, staffCoords.y, staffCoords.z)
+		TriggerEvent("usa:notifyStaff", '^2^*[STAFF]^r^0 Player ^2'..GetPlayerName(source)..' ['..source..'] ^0 has teleported to staff island.')
 		return
 	end
 	if tonumber(args[2]) ~= nil then

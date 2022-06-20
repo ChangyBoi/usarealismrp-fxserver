@@ -87,13 +87,11 @@ Citizen.CreateThread(function()
             Wait(50)
             if not IsPedShooting(myped) then
                 local w = GetSelectedPedWeapon(myped)
-                if w ~= `WEAPON_UNARMED` then
-                    local b1, wa = GetAmmoInClip(myped, w)
-                    if ranOutOfAmmo then
-                        wa = 0
-                    end
-                    TriggerServerEvent("ammo:save", wa)
+                local b1, wa = GetAmmoInClip(myped, w)
+                if ranOutOfAmmo then
+                    wa = 0
                 end
+                TriggerServerEvent("ammo:save", wa)
             end
         end
         Wait(1)

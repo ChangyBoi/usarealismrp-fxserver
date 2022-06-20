@@ -367,6 +367,9 @@ AddEventHandler("properties-og:moveItemToPropertyStorage", function(src, data)
   PROPERTIES[data.propertyName].storage.items = propertyInv
   SavePropertyData(data.propertyName)
   -- remove from person if success
+  if item.type == "weapon" then
+    TriggerClientEvent("interaction:equipWeapon", src, item, false)
+  end
   char.removeItemByIndex(data.fromSlot, (data.quantity or item.quantity))
   -- update GUI
   local invForGUI = {

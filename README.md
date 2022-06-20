@@ -52,7 +52,7 @@ USARRP
 			return auth
 		end)
 		```
-7) Create a new file named `server_internal.cfg` in the `server-data` folder
+7) Create a new file named `server_internal.cfg` in the `usarealismrp-fxserver` folder
     * write `sv_hostname <server name>`, replacing `<server name>` with a name of your choice
     * write `sv_licenseKey <license key>`, replacing `<license key>` with a [FiveM license key](https://keymaster.fivem.net/)
 8) Create path for log file (optional)
@@ -210,7 +210,13 @@ This also means a relatively small number of scripts are encrypted in this repos
 
 If you see an error that says "authentication failed" like this:
 
+w/ GitHub Desktop
+
 ![](https://media.discordapp.net/attachments/911848141622476871/975532220469088256/unknown.png?width=892&height=613)
+
+w/ Command line
+
+![](https://i.imgur.com/xbY13lj.png)
 
 That is normal. Just ignore it and click cancel.
 

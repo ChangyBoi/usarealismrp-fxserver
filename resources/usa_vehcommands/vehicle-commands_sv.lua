@@ -70,6 +70,11 @@ local VEHICLE_RANKS = {
 			allowedLiveries = { 1 },
 			hash = GetHashKey("1200RT")
 		},
+		["policebikerb"] = {
+			rank = 2,
+			allowedLiveries = { 1 },
+			hash = GetHashKey("policebikerb")
+		},
 		["polmav"] = {
 			rank = 3,
 			allowedLiveries = { 1 },
@@ -231,6 +236,11 @@ local VEHICLE_RANKS = {
 			rank = 5,
 			allowedLiveries = { 1 },
 			hash = GetHashKey("1200RT")
+		},
+		["policebikerb"] = {
+			rank = 2,
+			allowedLiveries = { 1 },
+			hash = GetHashKey("policebikerb")
 		},
 		["polmav"] = {
 			rank = 2,

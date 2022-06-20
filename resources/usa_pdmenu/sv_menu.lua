@@ -1,4 +1,4 @@
-local LEO_VEHICLES = {"pcvpi","p14charger", "p16explorer", "p18charger", "p18f250", "p18taurus", "p20explorer", "p20tahoe", "p21durango", "p21tahoe", "p22sierra", "sotruck", "1200RT", "npolchar", "npolstang", "npolchal", "npolvette", "fbi2", "bearcatrb", "14suvrb", "pbus", "policet"}
+local LEO_VEHICLES = {"pcvpi","p14charger", "p16explorer", "p18charger", "p18f250", "p18taurus", "p20explorer", "p20tahoe", "p21durango", "p21tahoe", "p22sierra", "sotruck", "1200RT", "policebikerb", "npolchar", "npolstang", "npolchal", "npolvette", "fbi2", "bearcatrb", "14suvrb", "pbus", "policet"}
 
 local JOB_VEHICLES = {
 	["sheriff"] = LEO_VEHICLES,

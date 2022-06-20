@@ -156,11 +156,8 @@ end
 
 VehInventoryManager.calcWeight = function(inv)
   local weight = 0
-  for i = 0, inv.MAX_ITEMS - 1 do
-    local invItem = inv.items[tostring(i)]
-    if invItem then
-      weight = weight + ((invItem.weight or 1.0) * (invItem.quantity or 1))
-    end
+  for index, item in pairs(inv.items) do
+    weight = weight + ((item.weight or 1.0) * (item.quantity or 1))
   end
   return weight
 end
