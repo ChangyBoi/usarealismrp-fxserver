@@ -131,7 +131,7 @@ Citizen.CreateThread(function()
       ------------------
       for k, v in pairs(markets) do
         local x, y, z = table.unpack(markets[k]['coords'])
-        DrawText3D(x, y, z, (markets[k]['3dTextDistance'] or 15), '[E] - Black Market')
+        DrawText3D(x, y, z, (markets[k]['3dTextDistance'] or 2), '[E] - Black Market')
       end
       --------------------------
       -- Listen for menu open --

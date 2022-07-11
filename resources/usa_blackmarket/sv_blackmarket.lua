@@ -3,7 +3,7 @@ math.random(); math.random(); -- prepare random price generator
 
 local markets = {
   ['marketA'] = {
-    ['coords'] = {-607.15, -1634.53, 33.05}, -- los santos
+    ['coords'] = {-424.69351196289, 179.0447845459, 80.596160888672}, -- los santos
     ['items'] = {
       {name = 'Lockpick', type = 'misc', price = 150, legality = 'illegal', quantity = 1, weight = 5, stock = math.random(0, 7)},
       --{name = 'Pistol', type = 'weapon', hash = 453432689, price = 3000, legality = 'illegal', quantity = 1, weight = 10, stock = math.random(0, 3), objectModel = "w_pi_pistol"},
@@ -37,7 +37,7 @@ local markets = {
     ["pedHash"] = -48477765
   },
   ['marketB'] = {
-    ['coords'] = {1579.81, 3613.78, 38.78}, -- sandy shores
+    ['coords'] = {-1936.9052734375, 2051.40625, 140.83247375488}, -- Vineyard
     ['items'] = {
       {name = 'Lockpick', type = 'misc', price = 150, legality = 'illegal', quantity = 1, weight = 5, stock = math.random(1, 5)},
       {name = 'Hotwiring Kit', type = 'misc', price = 300, legality = 'illegal', quantity = 1, weight = 10, stock = math.random(0, 6)},
@@ -58,7 +58,7 @@ local markets = {
     ["pedHash"] = -1773333796
   },
   ['marketC'] = {
-    ['coords'] = {2549.91, 4639.19, 34.08}, -- Grapeseed
+    ['coords'] = {4962.9575195313, -5108.0854492188, 2.9820621013641}, -- Island
     ['items'] = {
       { name = "Molotov", type = "weapon", hash = 615608432, price = 300, legality = "illegal", quantity = 1, weight = 20, stock = math.random(0, 3), objectModel = "w_ex_molotov"},
       --{ name = "Tommy Gun", type = "weapon", hash = 1627465347, price = 50000, legality = "illegal", quantity = 1, weight = 45, stock = math.random(0, 2), objectModel = "w_sb_gusenberg" },
@@ -73,7 +73,7 @@ local markets = {
       { name = "Empty 7.62mm Mag [30]", type = "magazine", price = 150, weight = 5, receives = "7.62mm", MAX_CAPACITY = 30, currentCapacity = 0, objectModel = "w_ar_carbinerifle_mag1" },
       { name = "Empty 5.56mm Mag [30]", type = "magazine", price = 150, weight = 5, receives = "5.56mm", MAX_CAPACITY = 30, currentCapacity = 0, objectModel = "w_ar_carbinerifle_mag1" },
     },
-    ['pedHash'] = 'a_m_o_soucent_03'
+    ['pedHash'] = 'mp_m_g_vagfun_01'
   },
   ['marketD'] = {
     ['coords'] = {113.24684906006, -1967.5310058594, 21.317762374878}, -- Grove St. house interior
