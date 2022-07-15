@@ -149,7 +149,8 @@ doctorLocations = {
     {311.01, -599.24, 43.29}, -- pillbox
     {-815.40, -1242.14, 7.33}, -- viceroy
     {1839.8976, 3687.0020, 34.2749}, -- sandy
-    {-256.0696, 6306.1753, 32.4272}, -- sandy
+    {-256.0696, 6306.1753, 32.4272}, -- paleto
+    {-176.41996765137, 406.39044189453, 110.77401733398}, -- blackmarket
 }
 
 effects = {} -- when you take damage for a specific reason, you may be put into an effect
