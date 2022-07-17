@@ -257,9 +257,9 @@ RegisterNUICallback('select-character', function(data, cb)
 			}
 		elseif data.spawn:find("Los Santos")  then
 			spawn_coords_closed_menu = {
-				x = -555.7731,
-				y = -606.0529,
-				z = 34.68177,
+				x = -555.16033935547,
+				y = -628.07855224609,
+				z = 34.67671585083,
 				heading = 0.0
 			}
 		elseif data.spawn:find("Property") then
