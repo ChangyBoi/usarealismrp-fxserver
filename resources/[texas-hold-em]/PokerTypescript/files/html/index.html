@@ -1,0 +1,153 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+
+    <script src="DEP/howler.js"></script>
+    <script src="DEP/vue.js"></script>
+    <script src="DEP/jquery.js"></script>
+    <script src="DEP/vue-swal.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="DEP/animate.css">
+    <link rel="stylesheet" href="DEP/defaultstyle.css">
+    <link rel="stylesheet" href="DEP/vue-swal.css">
+</head>
+
+<body>
+    <template id="app">
+        <transition enter-active-class="animate__animated animate__fadeIn"
+            leave-active-class="animate__animated animate__fadeOut">
+            <div v-if="opened">
+                <div class="kozeprehuz">
+                    <div class="poker-dealercards">
+                        <div :style="getCardBg(a)" class="card" v-for="(a,index) in dealercards">
+                        </div>
+                    </div>
+
+                    <transition enter-active-class="animate__animated animate__bounceIn"
+                        leave-active-class="animate__animated animate__bounceOut">
+                        <div class="poker-statistics-panel" v-show="statopened">
+                            <div v-if="statdata" class="stat-header">{{ statdata.name }}
+                                <i @click="statopened = !1" class="fas fa-times stat-exit"></i>
+                            </div>
+                            <i v-if="!statdata" class="fas fa-spinner stat-loading"></i>
+                            <div class="stat-entry" v-for="a in getstats">
+                                {{ a }}
+                            </div>
+                        </div>
+                    </transition>
+
+                    <div @mouseenter="PlaySound('hover.mp3')" @click="TriggerServerEvent('PokerJoinPlayer')" class="join"
+                        v-if="joined == false">{{ _U('join') }}</div>
+
+                    <div class="poker-navbar">
+                        <div @mouseenter="HoverEffect" @click="setImage" class="poker-menu-entry">
+                            <i class="fas fa-image"></i>
+                            <div class="info">{{ _U('change_image') }}</div>
+                        </div>
+                        <div @mouseenter="HoverEffect" @click="logsopened = !logsopened; SelectEffect()" class="poker-menu-entry">
+                            <i class="fas fa-history"></i>
+                            <div class="info">{{ _U('open_log') }}</div>
+                        </div>
+                        <div @mouseenter="HoverEffect" @click="openStatOnTarget($event);" class="poker-menu-entry">
+                            <i class="fas fa-chart-bar"></i>
+                            <div class="info">{{ _U('my_statistics') }}</div>
+                        </div>
+                    </div>
+
+                    <transition enter-active-class="animate__animated animate__bounceIn"
+                        leave-active-class="animate__animated animate__bounceOut">
+                        <div v-if="logsopened" class="poker-logs">
+                            <div class="poker-logentry" v-for="(a,index) in logs">
+                                {{ a }}
+                            </div>
+                        </div>
+                    </transition>
+
+                    <transition enter-active-class="animate__animated animate__bounceIn"
+                        leave-active-class="animate__animated animate__bounceOut">
+                        <div class="notify" v-if="notifymsg">
+                            <i class="fas fa-exclamation-circle"></i>
+                            {{ notifymsg }}
+                        </div>
+                    </transition>
+
+                    <div class="poker-infomanager">
+                        <div v-if="timer != null"><i class="fas fa-clock"></i> {{ timer }}</div>
+                        <br>
+                        <div v-if="gamestage != null">{{ _U('GAMESTAGE-' + gamestage) }}</div>
+                    </div>
+
+                    <div class="poker-dealerbank" v-if="mainpot > 0">
+                        <div :style="getChipsImage(mainpot)" class="chipimgentry"></div>
+                        <div class="chipamount">
+                            {{ mainpot > 0 ? formatMoney(mainpot) : '' }}
+                        </div>
+                    </div>
+
+                    <div class="controlpanel" v-if="joined">
+                        <i @click="Close()" class="fas fa-sign-out-alt anim exit"></i>
+                        <div class="mychips">
+                            <div class="imgentry"></div>
+                            <div class="amount">{{ formatMoney(mychips) }}</div>
+                        </div>
+                        <div @click="canAllIn() ? TriggerServerEvent('PokerAllIn') : null" :class="canAllIn() ? 'buttonka allin' : 'buttonka allin disabled'">{{ _U('button_allin') }}</div>
+                        <div @click="canThrow() ? TriggerServerEvent('PokerFold') : null" :class="canThrow() ? 'buttonka throw' : 'buttonka throw disabled'">{{ _U('button_throw') }}</div>
+                        <div @click="canPass() ? TriggerServerEvent('PokerPass') : null" :class="canPass() ? 'buttonka pass' : 'buttonka pass disabled'">{{ _U('button_pass') }}</div>
+                        <div @click="canCall() ? TriggerServerEvent('PokerCall') : null" :class="canCall() ? 'buttonka bet' : 'buttonka bet disabled'">{{ _U('button_call') }} {{ callAmount > 0 ? `(${callAmount})` : '' }}</div>
+                        <div @click="canBet() ? TriggerServerEvent('PokerBet', parseInt(betamount)) : null" :class="canBet() ? 'buttonka bet' : 'buttonka bet disabled'">{{ _U('button_bet') }}</div>
+                        
+                        <div class="rangeblock">
+                            <input :placeholder="_U('bet_placeholder')" 
+                            @input="PlaySound('typing.mp3')" max="5000" type="text" v-model="betamount">
+                        </div>
+                    </div>
+
+                    <div v-for="(a,index) in players"
+                        :class="currentplayer == index ? `playerblock active seat-${a.chairId}` : `playerblock seat-${a.chairId}`">
+                        <div v-if="canShowCards() && index > 2 && !a.throwed"
+                            :style="getCardBg(a.cards[0])" class="card">
+                        </div>
+                        <div v-if="canShowCards() && index > 2 && !a.throwed"
+                            :style="getCardBg(a.cards[1])" class="card">
+                        </div>
+                        <div @click="openStatOnTarget($event, a.src);" class="playerinfo" :style="{ 'backgroundImage': 'url(' + getPlayerBg(a.img) + ')' }">
+                            <div class="name">{{ a.playername }}</div>
+                            <div class="playerchips"><img src="./img/chips/chips.png" alt=""> {{ formatMoney(a.chips) }}</div>
+                            <div :class="index < 3 ? 'button-indicator dealer left' : 'button-indicator dealer right'"
+                                v-if="a.dealer">
+                            </div>
+                            <div :class="index < 3 ? 'button-indicator smallblind left' : 'button-indicator smallblind right'"
+                                v-if="a.smallblind">
+                            </div>
+                            <div :class="index < 3 ? 'button-indicator bigblind left' : 'button-indicator bigblind right'"
+                                v-if="a.bigblind">
+                            </div>
+                            <div :class="`playerbets seat-${index}`" v-if="a.roundbet">
+                                <img src="./img/chips/chips.png" alt=""> {{ formatMoney(a.roundbet) }}
+                            </div>
+                        </div>
+                        <div v-if="canShowCards() && index < 3 && !a.throwed"
+                            :style="getCardBg(a.cards[0])" class="card">
+                        </div>
+                        <div v-if="canShowCards() && index < 3 && !a.throwed"
+                            :style="getCardBg(a.cards[1])" class="card">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </transition>
+    </template>
+
+    <!-- itt kell lennie a végén -->
+    <script src="js/locale.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

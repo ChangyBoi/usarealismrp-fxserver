@@ -1,0 +1,3 @@
+node_modules
+files/js_compiled/client.js
+*.zip

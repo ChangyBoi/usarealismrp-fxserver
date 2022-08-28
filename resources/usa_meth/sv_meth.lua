@@ -18,11 +18,23 @@ AddEventHandler("methJob:methProduced", function(itemName, securityToken)
 		weight = 4,
 		objectModel = 'bkr_prop_meth_scoop_01a'
 	}
+	methProduced.coords = GetEntityCoords(GetPlayerPed(src))
+	local newCoords = {
+		x = methProduced.coords.x,
+		y = methProduced.coords.y,
+		z = methProduced.coords.z
+	}
+	newCoords.x = newCoords.x + (math.random() * 0.5)
+	newCoords.y = newCoords.y + (math.random() * 0.5)
+	newCoords.z = newCoords.z - 0.85
+	methProduced.coords = newCoords
+
 	if char.canHoldItem(methProduced) then
 		char.giveItem(methProduced)
 		TriggerClientEvent("usa:notify", src, "You have successfully proccessed the materials into a meth rock!")
     else
-		TriggerClientEvent("usa:notify", src, "Your inventory is full. Can't carry anymore!")
+		TriggerEvent("interaction:addDroppedItem", methProduced)
+		TriggerClientEvent("usa:notify", src, "Your inventory is full. Can't carry anymore! Item was dropped on the floor!")
     end
 end)
 

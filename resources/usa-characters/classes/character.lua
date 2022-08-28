@@ -612,5 +612,9 @@ function CreateCharacter(data)
     end
   end
 
+  rTable.notify = function(message)
+    TriggerClientEvent("usa:notify", self.source, message, "INFO: " .. message)
+  end
+
   return rTable
 end
