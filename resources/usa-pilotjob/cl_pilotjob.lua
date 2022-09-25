@@ -204,11 +204,11 @@ end)
 function SetJobClothing()
     --ClearPedProp(me, 0)
     if IsPedModel(me,"mp_f_freemode_01") then
-        SetPedComponentVariation(me, 3, 9, 0, 0) -- arms/hands
-        SetPedComponentVariation(me, 11, 24, 1, 2) -- torso
-        SetPedComponentVariation(me, 8, 38, 0, 2) -- accessories
+        SetPedComponentVariation(me, 3, 7, 0, 0) -- arms/hands
+        SetPedComponentVariation(me, 11, 10, 0, 2) -- torso
+        SetPedComponentVariation(me, 8, 5, 0, 2) -- accessories
         SetPedComponentVariation(me, 9, 0, 0, 2) -- remove vest
-        SetPedComponentVariation(me, 7, 22,1, 2) -- ties
+        SetPedComponentVariation(me, 7, 34,1, 2) -- ties
         SetPedComponentVariation(me, 4, 6, 1, 2) -- legs
         SetPedComponentVariation(me, 6, 58, 1, 2) -- feet
         --SetPedPropIndex(me, 0, 1, math.random(1, 7), true) -- add headet on head (need to find right prop)

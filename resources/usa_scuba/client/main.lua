@@ -7,11 +7,11 @@
 -- males --
 -- goggles: glasses - 40
 -- oxygen tank: shirt - 137
--- flippers: feet - 89
+-- flippers: feet - 93
 
 -- females --
 -- goggles: glasses - 42
--- oxygen tank: shirt - 173
+-- oxygen tank: shirt - 177
 -- flippers: feet - 89
 
 --SetEnableScuba(PlayerPedId(), true)
@@ -51,10 +51,10 @@ AddEventHandler("scuba:useGear", function()
             if GetEntityModel(PlayerPedId()) == `mp_m_freemode_01` then -- male
                 toGive.glasses = 40
                 toGive.shirt = 137
-                toGive.feet = 89
+                toGive.feet = 93
             else
                 toGive.glasses = 42
-                toGive.shirt = 173
+                toGive.shirt = 177
                 toGive.feet = 89
             end
             SetPedMaxTimeUnderwater(p, 1500.00)
