@@ -1946,9 +1946,9 @@ end
 
 function playHealingAnimation(ped)
 	exports.globals:loadAnimDict("combat@damage@injured_pistol@to_writhe")
-	TaskPlayAnim(ped, "combat@damage@injured_pistol@to_writhe", "variation_d", 8.0, 1, -1, 49, 0, 0, 0, 0)
-	Wait(2600)
-	StopAnimTask(ped, "combat@damage@injured_pistol@to_writhe", "variation_d", 1.0)
+	TaskPlayAnim(ped, "combat@damage@injured_pistol@to_writhe", "variation_b", 8.0, 1, -1, 49, 0, 0, 0, 0)
+	Wait(5000)
+	StopAnimTask(ped, "combat@damage@injured_pistol@to_writhe", "variation_b", 1.0)
 end
 
 function isMeleeWeapon(wepHash)
