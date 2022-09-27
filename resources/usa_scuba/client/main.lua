@@ -12,7 +12,7 @@
 -- females --
 -- goggles: glasses - 42
 -- oxygen tank: shirt - 177
--- flippers: feet - 89
+-- flippers: feet - 91
 
 --SetEnableScuba(PlayerPedId(), true)
 --SetPedMaxTimeUnderwater(PlayerPedId(), 1500.00)
@@ -55,7 +55,7 @@ AddEventHandler("scuba:useGear", function()
             else
                 toGive.glasses = 42
                 toGive.shirt = 177
-                toGive.feet = 89
+                toGive.feet = 91
             end
             SetPedMaxTimeUnderwater(p, 1500.00)
             SetPedComponentVariation(p, 6, toGive.feet, 4, 1) -- flippers
