@@ -4,6 +4,7 @@ games {'gta5'}
 description 'Weapon Meta Files'
 
 files {
+	'weapons.meta',
 	'weaponanimations.meta',
 	'weapon_ceramicpistol.meta',
 	'weapon_militaryrifle.meta',
@@ -18,17 +19,16 @@ files {
 	'weapons_bullpuprifle_mk2.meta',
 	'weapons_carbinerifle_mk2.meta',
 	'weapons_pistol_mk2.meta',
-	'weapons_pistol50.meta',
 	'weapons_smg_mk2.meta',
 	'weapons_snspistol_mk2.meta',
 	'weapons_specialcarbine_mk2.meta',
 	'weaponsnspistol.meta',
-	'weaponspecialcarbine.meta',
-	'weaponsmg.meta'
+	'weaponspecialcarbine.meta'
 }
 
 data_file 'WEAPON_ANIMATIONS_FILE' 'weaponanimations.meta'
 
+data_file 'WEAPONINFO_FILE_PATCH' 'weapons.meta'
 data_file 'WEAPONINFO_FILE_PATCH' 'weapon_ceramicpistol.meta'
 data_file 'WEAPONINFO_FILE_PATCH' 'weapon_militaryrifle.meta'
 data_file 'WEAPONINFO_FILE_PATCH' 'weaponbullpuprifle.meta'
@@ -42,10 +42,8 @@ data_file 'WEAPONINFO_FILE_PATCH' 'weapons_assaultrifle_mk2.meta'
 data_file 'WEAPONINFO_FILE_PATCH' 'weapons_bullpuprifle_mk2.meta'
 data_file 'WEAPONINFO_FILE_PATCH' 'weapons_carbinerifle_mk2.meta'
 data_file 'WEAPONINFO_FILE_PATCH' 'weapons_pistol_mk2.meta'
-data_file 'WEAPONINFO_FILE_PATCH' 'weapons_pistol50.meta'
 data_file 'WEAPONINFO_FILE_PATCH' 'weapons_snspistol_mk2.meta'
 data_file 'WEAPONINFO_FILE_PATCH' 'weapons_smg_mk2.meta'
 data_file 'WEAPONINFO_FILE_PATCH' 'weapons_specialcarbine_mk2.meta'
 data_file 'WEAPONINFO_FILE_PATCH' 'weaponsnspistol.meta'
 data_file 'WEAPONINFO_FILE_PATCH' 'weaponspecialcarbine.meta'
-data_file 'WEAPONINFO_FILE_PATCH' 'weaponsmg.meta'
